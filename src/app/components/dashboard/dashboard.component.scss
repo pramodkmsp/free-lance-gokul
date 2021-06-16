@@ -1,0 +1,20 @@
+.chart1-group {
+    display: flex;
+    justify-content: space-between;
+}
+.line {
+    background: #93d54c;
+    position:relative;
+    height:15px;
+}
+.line:before {
+    content:'';
+    background: #0a6e9e;
+    width:20%;
+    height:15px;
+    position:absolute;
+}
+
+.graph-title {
+    font-weight: 500;
+}
