@@ -11,9 +11,11 @@ import { Chart1Component } from './components/charts/chart1/chart1.component';
 import { Chart2Component } from './components/charts/chart2/chart2.component';
 import { Chart3Component } from './components/charts/chart3/chart3.component';
 import { Chart4Component } from './components/charts/chart4/chart4.component';
+import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, DashboardComponent, Chart1Component, Chart2Component, Chart3Component, Chart4Component],
-  imports: [BrowserModule, AppRoutingModule, ChartsModule],
+  declarations: [AppComponent, HeaderComponent, DashboardComponent, Chart1Component, Chart2Component, Chart3Component, Chart4Component, LoginComponent],
+  imports: [BrowserModule, AppRoutingModule, ChartsModule,FormsModule,ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">
-      <img src="../../../assets/logo.png" height="40px" width="auto" alt="" srcset="">
+      <img src="../../../assets/logo.png" height="40px"  width="auto" alt="" srcset="" *ngIf="_router.url != '/'">
   </a>
   
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -9,21 +9,16 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <!-- <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
-      </li>
-    </ul> -->
-    <ul class="navbar-nav ml-auto">
+    <ul class="navbar-nav ml-auto" *ngIf="_router.url != '/'" >
       <li class="nav-item dropdown dropleft">
         <img src="../../../assets/profile.jpeg" alt="" id="navbarDropdown" role="button" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">George Chou
-          <caption>General manager</caption>
+          <a class="dropdown-item">{{currentUser}}
+          <caption>{{role}}</caption>
           </a>
           <a class="dropdown-item" href="#">View Account</a>
-          <a class="dropdown-item" href="#">Sign Out</a>
+          <a class="dropdown-item" (click)="onLogOutClick()">Sign Out</a>
         </div>
       </li>
     </ul>
