@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "POWER-BI-DEMO": {
+    "apps": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "POWER-BI-DEMO:build"
+            "browserTarget": "apps:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "POWER-BI-DEMO:build:production"
+              "browserTarget": "apps:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "POWER-BI-DEMO:build"
+            "browserTarget": "apps:build"
           }
         },
         "test": {
@@ -102,18 +102,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "POWER-BI-DEMO:serve"
+            "devServerTarget": "apps:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "POWER-BI-DEMO:serve:production"
+              "devServerTarget": "apps:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "POWER-BI-DEMO",
+  "defaultProject": "apps",
   "cli": {
     "analytics": "fdee4b4e-a5f7-4d07-bd8c-2578ff4eb1f0"
   }
